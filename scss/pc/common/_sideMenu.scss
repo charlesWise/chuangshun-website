@@ -1,0 +1,101 @@
+@charset "UTF-8";
+.side-meun-container {
+    @include position(fixed);
+    top: 200px;
+    right: 0;
+    .side-meun {
+        ul {
+            li {
+                cursor: pointer;
+                &.return-to-top {
+                    display: none;
+                }
+                &.e-mail {
+                    margin-top: 40px;
+                    @extend %relative;
+                    .hover-box {
+                        @extend %absolute;
+                        top: -45px;
+                        right: 100px;
+                        width: 140px;
+                        height: 130px;
+                        background: #363b3f;
+                        @include prefixer(border-radius, 8px, webkit o moz);
+                        display: none;
+                        p {
+                            color: #fff;
+                            @include font-size(16);
+                            &.title {
+                                padding: 25px 0 0 15px;
+                            }
+                            &.value {
+                                padding: 5px 0 0 15px;
+                            }
+                        }
+                        .triangle {
+                            @extend %inline-block;
+                            width: 0;
+                            height: 0;
+                            @extend %absolute;
+                            top: 70px;
+                            right: -12px;
+                            border-top: 10px solid transparent;
+                            border-left: 12px solid #363b3f;
+                            border-bottom: 10px solid transparent;
+                        }
+                    }
+                    &:hover {
+                        .hover-box {
+                            @extend %inline-block;
+                        }
+                    }
+                }
+
+                &.wechat {
+                    @extend %relative;
+                    .hover-box {
+                        @extend %absolute;
+                        top: -45px;
+                        right: 100px;
+                        width: 140px;
+                        height: 168px;
+                        background: #363b3f;
+                        @include prefixer(border-radius, 8px, webkit o moz);
+                        display: none;
+                        p {
+                            color: #fff;
+                            @include font-size(16);
+                            @include textAlign();
+                            &.title {
+                                padding: 15px 0 0 0;
+                                img {
+                                    width: 110px;
+                                    height: 110px;
+                                }
+                            }
+                            &.value {
+                                padding: 10px 0 0 0;
+                            }
+                        }
+                        .triangle {
+                            @extend %inline-block;
+                            width: 0;
+                            height: 0;
+                            @extend %absolute;
+                            top: 70px;
+                            right: -12px;
+                            border-top: 10px solid transparent;
+                            border-left: 12px solid #363b3f;
+                            border-bottom: 10px solid transparent;
+                        }
+                    }
+                    &:hover {
+                        .hover-box {
+                            @extend %inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,134 @@
+@charset "UTF-8";
+@import "sassCore/base"; //sassCore 库文件
+@import 'base/mixin'; // mixin函数
+.home-banner {
+    @include backgroundImages('../../images/home/banner.png', 100%, 590px);
+    background-size: auto;
+}
+
+.project-service {
+    background: #fff;
+    .project-content {
+        @include max-width;
+        margin: 0 auto;
+        .project-title {
+            @include textAlign();
+            p {
+                color: #323232;
+                &.title {
+                    @include font-size(30);
+                    padding-top: 40px;
+                }
+                &.sub-title {
+                    @include font-size(20);
+                    padding-top: 28px;
+                }
+            }
+        }
+    }
+    .service-content {
+        padding-top: 90px;
+        ul {
+            @include clearfix();
+            li {
+                @include float(left);
+                width: 320px;
+                height: 460px;
+                margin: 0 70px 0 0;
+                &.last-li {
+                    margin-right: 0;
+                }
+                .service-wrap {
+                    height: 455px;
+                    @extend %inline-block;
+                    p {
+                        @include textAlign();
+                        &.icon {}
+                        &.title {
+                            @include font-size(24);
+                            color: #000;
+                            margin: 65px 0 30px;
+                            span {
+                                color: #2a3b8f;
+                            }
+                        }
+                        &.brief {
+                            @include textAlign(left);
+                            color: #87949e;
+                        }
+                    }
+                }
+                &:hover {
+                    .service-wrap {
+                        border-bottom: #2372e1 5px solid;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.choose-us-content {
+    background: #f9fafc;
+    .choose-us {
+        @include max-width;
+        margin: 0 auto;
+        .choose-title {
+            @include textAlign();
+            p {
+                color: #000;
+                &.title {
+                    @include font-size(36);
+                    padding-top: 70px;
+                    span {
+                        font-weight: bold;
+                    }
+                }
+                &.sub-title {
+                    @include font-size(24);
+                }
+                &.decorate {
+                    span {
+                        @extend %inline-block;
+                        width: 74px;
+                        height: 1px;
+                        background: #999;
+                        @include vertical-align(middle);
+                    }
+                    i {
+                        @extend %inline-block;
+                        width: 8px;
+                        height: 8px;
+                        margin: 0 15px;
+                        background: #1b6fe4;
+                        @include prefixer(border-radius, 50%, webkit o moz);
+                    }
+                }
+            }
+        }
+        .slide-case {
+            ul {
+                width: 1100px;
+                @include height(true, 240px, 240px);
+                overflow: hidden;
+                li {
+                    width: 25%;
+                    @include float(left);
+                    @include textAlign();
+                    img {
+                        width: 251px;
+                        height: 123px;
+                    }
+                }
+            }
+            .control {
+                @include textAlign();
+                padding: 0 0 60px;
+                span {
+                    margin: 0 15px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

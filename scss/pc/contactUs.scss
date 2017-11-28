@@ -1,0 +1,171 @@
+@charset "UTF-8";
+@import "sassCore/base"; //sassCore 库文件
+@import 'base/mixin'; // mixin函数
+.contact-banner {
+    @include backgroundImages('../../../images/contactus/banner.png', 100%, 401px);
+    background-size: auto;
+    margin-top: 80px;
+}
+.address-info-container {
+    background: #fff;
+    .address-info-content {
+        @include max-width;
+        margin: 0 auto;
+        .info {
+            padding-top: 100px;
+            .address-tel, .link, .c-line {
+                @include float(left);
+            }
+            .c-line {
+                width: 2px;
+                height: 285px;
+                background: #eaecec;
+                margin-top: 15px;
+            }
+            .address-tel {
+                width: 650px;
+                p {
+                    color: #3f3f3f;
+                    @include font-size(18);
+                    &.title {
+                        color: #2e2e2e;
+                        @include font-size(24);
+                        margin-bottom: 55px;
+                    }
+                    &.addr {
+                        margin-bottom: 15px;
+                    }
+                    &.tel {
+                        margin-bottom: 15px;
+                    }
+                    &.contact {
+                        margin-bottom: 15px;
+                    }
+                    &.email {
+                        span {
+                            color: #4abdf9;
+                        }
+                    }
+                }
+            }
+            .link {
+                width: 313px;
+                padding-left: 135px;
+                p {
+                    &.title {
+                        color: #2e2e2e;
+                        @include font-size(24);
+                        margin-bottom: 35px;
+                    }
+                    &.photo {
+                        img {
+                            width: 227px;
+                            height: 254px;
+                        }
+                    }
+                }
+            }
+        }
+        .map {
+            padding: 75px 0 80px;
+            @include textAlign();
+            img {
+                width: 1100px;
+                height: 334px;
+            }
+        }
+    }
+}
+.recruitment-container {
+    background: #f3f3f3;
+    .recruitment-content {
+        @include max-width;
+        margin: 0 auto;
+        .recruit-title {
+            @include textAlign();
+            p {
+                &.ch {
+                    @include font-size(28);
+                    padding-top: 70px;
+                }
+                &.en {
+                    @include font-size(20);
+                    color: #888;
+                    padding: 10px 0 20px;
+                }
+            }
+        }
+        .environment {
+            ul {
+                @include clearfix();
+                li {
+                    @include float(left);
+                    height: 362px;
+                    &.photo {
+                        width: 700px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    &.work {
+                        width: 360px;
+                        background: #fff;
+                        height: 305px;
+                        padding: 57px 0 0 40px;
+                        p {
+                            &.title {
+                                @include font-size(40);
+                                color: #47b8f3;
+                                font-weight: bold;
+                            }
+                            &.text {
+                                @include font-size(18);
+                                color: #5d5e5e;
+                                line-height: 38px;
+                                padding-right: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .job {
+            margin-top: 55px;
+            ul {
+                @include clearfix();
+                li {
+                    width: 250px;
+                    height: 250px;
+                    background: #fff;
+                    outline: #ededed 1px solid;
+                    @include float(left);
+                    margin: 0 33.3px 40px 0;
+                    @include prefixer(border-radius, 0 0 10px 10px, webkit o moz);
+                    @include prefixer(box-shadow, -1px 0px 8px #e9e9e9, webkit o moz);
+                    &.last-li {
+                        margin-right: 0;
+                    }
+                    .post {
+                        color: #204d90;
+                        @include font-size(24);
+                        padding: 20px;
+                        span {
+                            margin-right: 20px;
+                        }
+                    }
+                    .post-case {
+                        padding: 16px 16px 16px 40px;
+                        a {
+                            color: #5d5e5e;
+                            @include font-size(20);
+                            &.first {
+                                margin-right: 55px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

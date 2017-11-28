@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@import "sassCore/base"; //sassCore 库文件
+@import 'base/mixin'; // mixin函数
+.case-box-container {
+    margin-top: 80px;
+    width: 100%;
+    background-size: auto;
+    .case-box-content {
+        @include max-width;
+        @extend %relative;
+        top: 300px;
+        left: 50%;
+        margin-left: -550px;
+        margin-bottom: 300px;
+        background: #fff;
+    }
+}
+
+.detail-content {
+    margin: 0 auto;
+    .background-intro {
+        padding: 40px 40px 80px;
+        p {
+            &.name {
+                color: #1ba0e5;
+                @include font-size(30);
+            }
+            &.title {
+                color: #1ba0e5;
+                @include font-size(20);
+                padding: 30px 0 15px;
+            }
+            &.brief {
+                color: #888;
+                @include font-size(18);
+            }
+        }
+    }
+    .map {
+        margin: 0 auto;
+        padding-bottom: 60px;
+        font-size: 0;
+        background: #fff;
+        img {
+            display: block;
+            font-size: 0;
+        }
+    }
+}
+
+.up-down-content {
+    @include max-width;
+    margin: 0 auto;
+    padding: 20px 0 80px;
+    background: #fff;
+    ul {
+        @include clearfix();
+        li {
+            width: 33.3%;
+            @include float(left);
+            @include textAlign();
+            a {
+                @extend %inline-block;
+                @include prefixer(border-radius, 20px, webkit o moz);
+                padding: 2px 15px;
+                @include font-size(18);
+            }
+            &.prev {
+                a {
+                    color: #0195f9;
+                    border: #dadada 1px solid;
+                }
+            }
+            &.all {
+                a {
+                    color: #fff;
+                    background: #0195f9;
+                }
+            }
+            &.next {
+                a{
+                    color: #0195f9;
+                    border: #dadada 1px solid;
+                }
+            }
+        }
+    }
+}

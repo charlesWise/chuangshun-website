@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@import "sassCore/base";//sassCore 库文件
+@import "sassCore/core/setting"; //sassCore 文件引用
+@import "sassCore/core/css3"; //sassCore 文件引用
+@import "sassCore/core/mixin"; //sassCore 文件引用
+@import 'sassCore/function'; //function
+
+@import "base/sprites"; //compass 雪碧图 基本引用
+@import 'base/variable'; // 网站基础变量设置
+@import 'base/mixin'; // mixin函数
+@import 'base/icons'; // 整站icons
+
+@import "./common/header";  //公共头部
+@import "./common/footer";  //公共底部
+@import "./common/sideMenu";  //侧边栏

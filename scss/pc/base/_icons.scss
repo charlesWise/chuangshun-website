@@ -1,0 +1,338 @@
+@charset "UTF-8";
+
+/**
+ *  @chenrunsheng
+ *  $width icon宽度
+ *  $height icon高度
+ */
+
+@mixin sprite-background($width, $height, $rate:320/640) {
+    background-size: 100% 100%;
+    @extend %inline-block;
+    width: $width*$rate;
+    @include vertical-align;
+    @include height(true, $height*$rate, $height*$rate+1);
+}
+
+
+/* icons */
+
+.icon_logo_one {
+    background: url(/images/logo/logo_one.png) no-repeat;
+    @include sprite-background(190px, 39px, 1);
+}
+
+.icon_logo_two {
+    background: url(/images/logo/logo_two.png) no-repeat;
+    @include sprite-background(190px, 39px, 1);
+}
+
+.icon_solution {
+    background: url(/images/home/solution.png) no-repeat;
+    @include sprite-background(200px, 177px, 0.9);
+}
+
+.icon_service {
+    background: url(/images/home/service.png) no-repeat;
+    @include sprite-background(174px, 171px, 0.9);
+}
+
+.icon_platform {
+    background: url(/images/home/platform.png) no-repeat;
+    @include sprite-background(164px, 176px, 0.9);
+}
+
+.icon_next {
+    background: url(/images/home/case/next.png) no-repeat;
+    @include sprite-background(46px, 46px, 1);
+}
+
+.icon_next_act {
+    background: url(/images/home/case/next_act.png) no-repeat;
+    @include sprite-background(46px, 46px, 1);
+}
+
+.icon_prev {
+    background: url(/images/home/case/prev.png) no-repeat;
+    @include sprite-background(46px, 46px, 1);
+}
+
+.icon_prev_act {
+    background: url(/images/home/case/prev_act.png) no-repeat;
+    @include sprite-background(46px, 46px, 1);
+}
+
+.icon_c_service {
+    background: url(/images/footer/c_service.png) no-repeat;
+    @include sprite-background(62px, 59px, 1);
+}
+
+.icon_QR_code {
+    background: url(/images/footer/QR_code.png) no-repeat;
+    @include sprite-background(143px, 143px, 1);
+}
+
+.icon_desire {
+    background: url(/images/aboutus/desire.png) no-repeat;
+    @include sprite-background(56px, 54px, 1);
+}
+
+.icon_mission {
+    background: url(/images/aboutus/mission.png) no-repeat;
+    @include sprite-background(56px, 54px, 1);
+}
+
+.icon_worth {
+    background: url(/images/aboutus/worth.png) no-repeat;
+    @include sprite-background(56px, 54px, 1);
+}
+
+.icon_summary {
+    background: url(/images/service/summary.png) no-repeat;
+    @include sprite-background(110px, 110px, 1);
+}
+
+.icon_business {
+    background: url(/images/service/business.png) no-repeat;
+    @include sprite-background(110px, 110px, 1);
+}
+
+.icon_solution_plan {
+    background: url(/images/service/solution_plan.png) no-repeat;
+    @include sprite-background(110px, 110px, 1);
+}
+
+.icon_consult {
+    background: url(/images/service/consult.png) no-repeat;
+    @include sprite-background(29px, 26px, 1);
+}
+
+.icon_cloud {
+    background: url(/images/service/cloud.png) no-repeat;
+    @include sprite-background(35px, 25px, 1);
+}
+
+.icon_automatic {
+    background: url(/images/service/automatic.png) no-repeat;
+    @include sprite-background(33px, 30px, 1);
+}
+
+.icon_wireless {
+    background: url(/images/service/wireless.png) no-repeat;
+    @include sprite-background(136px, 136px, 1);
+}
+
+.icon_mobile_test {
+    background: url(/images/service/mobile_test.png) no-repeat;
+    @include sprite-background(136px, 136px, 1);
+}
+
+.icon_ie_summary {
+    background: url(/images/service/ie_summary.png) no-repeat;
+    @include sprite-background(110px, 110px, 1);
+}
+
+.icon_ie_business {
+    background: url(/images/service/ie_business.png) no-repeat;
+    @include sprite-background(110px, 110px, 1);
+}
+
+.icon_service_1 {
+    background: url(/images/service/service_1.png) no-repeat;
+    @include sprite-background(82px, 62px, 1);
+}
+
+.icon_service_2 {
+    background: url(/images/service/service_2.png) no-repeat;
+    @include sprite-background(82px, 63px, 1);
+}
+
+.icon_service_3 {
+    background: url(/images/service/service_3.png) no-repeat;
+    @include sprite-background(82px, 58px, 1);
+}
+
+.icon_service_4 {
+    background: url(/images/service/service_4.png) no-repeat;
+    @include sprite-background(82px, 57px, 1);
+}
+
+.icon_category {
+    background: url(/images/service/category.png) no-repeat;
+    @include sprite-background(92px, 92px, 1);
+}
+
+.icon_range {
+    background: url(/images/service/range.png) no-repeat;
+    @include sprite-background(92px, 92px, 1);
+}
+
+.icon_case {
+    background: url(/images/service/case.png) no-repeat;
+    @include sprite-background(92px, 92px, 1);
+}
+
+.icon_banking {
+    background: url(/images/service/banking.png) no-repeat;
+    @include sprite-background(82px, 59px, 1);
+}
+
+.icon_p2p {
+    background: url(/images/service/p2p.png) no-repeat;
+    @include sprite-background(82px, 58px, 1);
+}
+
+.icon_insure {
+    background: url(/images/service/insure.png) no-repeat;
+    @include sprite-background(82px, 57px, 1);
+}
+
+.icon_industry {
+    background: url(/images/service/industry.png) no-repeat;
+    @include sprite-background(82px, 57px, 1);
+}
+
+.icon_programme_1 {
+    background: url(/images/service/programme_1.png) no-repeat;
+    @include sprite-background(60px, 60px, 1);
+}
+
+.icon_programme_2 {
+    background: url(/images/service/programme_2.png) no-repeat;
+    @include sprite-background(60px, 60px, 1);
+}
+
+.icon_programme_3 {
+    background: url(/images/service/programme_3.png) no-repeat;
+    @include sprite-background(60px, 60px, 1);
+}
+
+.icon_f_service {
+    background: url(/images/service/classify/f_service.png) no-repeat;
+    @include sprite-background(92px, 92px, 1);
+}
+
+.icon_f_service_act {
+    background: url(/images/service/classify/f_service_act.png) no-repeat;
+    @include sprite-background(92px, 92px, 1);
+}
+
+.icon_ie_platform {
+    background: url(/images/service/classify/ie_platform.png) no-repeat;
+    @include sprite-background(92px, 92px, 1);
+}
+
+.ie_platform_act {
+    background: url(/images/service/classify/ie_platform_act.png) no-repeat;
+    @include sprite-background(92px, 92px, 1);
+}
+
+.icon_ued {
+    background: url(/images/service/classify/ued.png) no-repeat;
+    @include sprite-background(92px, 92px, 1);
+}
+
+.icon_ued_act {
+    background: url(/images/service/classify/ued_act.png) no-repeat;
+    @include sprite-background(92px, 92px, 1);
+}
+
+.icon_job_1 {
+    background: url(/images/contactus/job_1.png) no-repeat;
+    @include sprite-background(60px, 60px, 1);
+}
+
+.icon_job_2 {
+    background: url(/images/contactus/job_2.png) no-repeat;
+    @include sprite-background(60px, 60px, 1);
+}
+
+.icon_job_3 {
+    background: url(/images/contactus/job_3.png) no-repeat;
+    @include sprite-background(60px, 60px, 1);
+}
+
+.icon_job_4 {
+    background: url(/images/contactus/job_4.png) no-repeat;
+    @include sprite-background(60px, 60px, 1);
+}
+
+.icon_job_5 {
+    background: url(/images/contactus/job_5.png) no-repeat;
+    @include sprite-background(60px, 60px, 1);
+}
+
+.icon_job_6 {
+    background: url(/images/contactus/job_6.png) no-repeat;
+    @include sprite-background(60px, 60px, 1);
+}
+
+.icon_job_7 {
+    background: url(/images/contactus/job_7.png) no-repeat;
+    @include sprite-background(60px, 60px, 1);
+}
+
+.icon_ds {
+    background: url(/images/service/classify/ds.png) no-repeat;
+    @include sprite-background(58px, 43px, 1);
+}
+
+.icon_dc {
+    background: url(/images/service/classify/dc.png) no-repeat;
+    @include sprite-background(44px, 47px, 1);
+}
+
+.icon_mt {
+    background: url(/images/service/classify/mt.png) no-repeat;
+    @include sprite-background(57px, 37px, 1);
+}
+
+.icon_ly {
+    background: url(/images/service/classify/ly.png) no-repeat;
+    @include sprite-background(43px, 43px, 1);
+}
+
+.icon_zc {
+    background: url(/images/service/classify/zc.png) no-repeat;
+    @include sprite-background(43px, 42px, 1);
+}
+
+.icon_ls {
+    background: url(/images/service/classify/zc.png) no-repeat;
+    @include sprite-background(49px, 41px, 1);
+}
+
+.icon_yl {
+    background: url(/images/service/classify/yl.png) no-repeat;
+    @include sprite-background(30px, 42px, 1);
+}
+
+.icon_ny {
+    background: url(/images/service/classify/ny.png) no-repeat;
+    @include sprite-background(56px, 33px, 1);
+}
+
+.icon_prototype {
+    background: url(/images/service/classify/prototype.png) no-repeat;
+    @include sprite-background(82px, 82px, 1);
+}
+
+.icon_ui_design {
+    background: url(/images/service/classify/ui_design.png) no-repeat;
+    @include sprite-background(82px, 82px, 1);
+}
+
+.icon_develop {
+    background: url(/images/service/classify/develop.png) no-repeat;
+    @include sprite-background(82px, 82px, 1);
+}
+
+.icon_testing {
+    background: url(/images/service/classify/testing.png) no-repeat;
+    @include sprite-background(82px, 82px, 1);
+}
+
+.icon_s_down_arrow {
+    background: url(/images/service/classify/down_arrow.png) no-repeat;
+    @include sprite-background(22px, 14px, 1);
+}

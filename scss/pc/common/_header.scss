@@ -1,0 +1,140 @@
+@charset "UTF-8";
+.clearfix {
+    @include clearfix;
+}
+
+.dn {
+    display: none;
+}
+
+.common-header-container {
+    .header-container {
+        background: #fff;
+        width: 100%;
+        border-bottom: #0069ff 2px solid;
+        @include position(fixed);
+        top: 0;
+        left: 0;
+        z-index: $headZindex;
+        .header-content {
+            @include max-width;
+            margin: 0 auto;
+            dl.header {
+                @include height(true, 80px, 80px);
+                dt,
+                dd {
+                    width: 550px;
+                    @include float(left);
+                }
+                dt {}
+                dd {
+                    ul {
+                        li {
+                            @include float(left);
+                            width: 25%;
+                            @include textAlign(right);
+                            @extend %relative;
+                            a {
+                                color: #6e6e6e;
+                                @include font-size(18);
+                            }
+                            &.active {
+                                a {
+                                    color: #37afff;
+                                    font-weight: bold;
+                                }
+                            }
+                            &:hover {
+                                a {
+                                    color: #37afff;
+                                    font-weight: bold;
+                                }
+                            }
+                            ul.drop-down {
+                                width: 212px;
+                                @extend %absolute;
+                                li {
+                                    @include float(none);
+                                    width: 172px;
+                                    @include height(true, 65px, 65px);
+                                    padding: 0 20px;
+                                    @include textAlign(left);
+                                    background: rgba(0, 0, 0, 0.84);
+                                    a {
+                                        color: #c6c6c6;
+                                        @include font-size(16);
+                                        font-weight: normal;
+                                        width: 100%;
+                                        @extend %inline-block;
+                                        border-bottom: #c6c6c6 1px solid;
+                                        @extend %relative;
+                                        z-index: 1;
+                                        &.remove-b-line {
+                                            border-bottom: none;
+                                        }
+                                    }
+                                    &.active-sub {
+                                        background: #069bff;
+                                        a {
+                                            border-bottom: none;
+                                        }
+                                    }
+                                    &.last-li {
+                                        @include prefixer(border-radius, 0 0 5px 5px, webkit o moz);
+                                        a {
+                                            border-bottom: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .custom-header-container {
+        border-bottom: none;
+        background: none;
+        .header-content {
+            dl.header {
+                dt,
+                dd {}
+                dt {}
+                dd {
+                    ul {
+                        li {
+                            a {
+                                color: #a4a5ac;
+                            }
+                            &.active {
+                                a {}
+                            }
+                            &:hover {
+                                a {}
+                            }
+                            ul.drop-down {
+                                border-top: #0069ff 2px solid;
+                                li {
+                                    background: #0f162f;
+                                    a {
+                                        color: #c6c6c6;
+                                        border-bottom: #c6c6c6 1px solid;
+                                        &.remove-b-line {}
+                                    }
+                                    &.active-sub {
+                                        background: #069bff;
+                                        a {}
+                                    }
+                                    &.last-li {
+                                        a {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

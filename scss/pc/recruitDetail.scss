@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import "sassCore/base"; //sassCore 库文件
+@import 'base/mixin'; // mixin函数
+.position-detail-container {
+    background: #fff;
+    padding-top: 80px;
+    .position-detail-content {
+        @include max-width;
+        margin: 0 auto;
+        padding-top: 80px;
+        .detail {
+            @include float(left);
+            width: 900px;
+            .post-name {
+                p {
+                    color: #000;
+                    @include font-size(28);
+                }
+            }
+            .duty {
+                .title {
+                    color: #204d90;
+                    @include font-size(20);
+                    font-weight: bold;
+                    padding: 20px 0 15px;
+                }
+                .text {
+                    color: #888;
+                    @include font-size(16);
+                    line-height: 38px;
+                }
+            }
+            .notes {
+                padding: 22px 0 90px;
+                p {
+                    color: #666;
+                    @include font-size(16);
+                }
+            }
+        }
+        .related-post {
+            @include float(left);
+            width: 180px;
+            outline: #ededed 1px solid;
+            padding: 28px 0 28px 20px;
+            .title {
+                p {
+                    color: #000;
+                    @include font-size(20);
+                }
+            }
+            .related-list {
+                ul {
+                    @include clearfix();
+                    li {
+                        @include font-size(16);
+                        padding-top: 25px;
+                        .name {
+                            color: #4e4e4e;
+                            padding-bottom: 5px;
+                        }
+                        .require {
+                            color: #888;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
